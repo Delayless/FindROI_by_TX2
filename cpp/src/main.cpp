@@ -6,8 +6,8 @@
 using namespace cv;
 using namespace std;
 int main(int argc, char* argv[]) {
-	//VideoCapture capture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)2592, height=(int)1458,format=(string)I420, framerate=(fraction)24/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink");
-	VideoCapture capture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)1280, height=(int)720,format=(string)I420, framerate=(fraction)24/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink");
+	//VideoCapture capture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)2592, height=(int)1458,format=(string)I420, framerate=(fraction)24/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink");
+	VideoCapture capture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)1280, height=(int)720,format=(string)I420, framerate=(fraction)24/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink");
 	if (!capture.isOpened()) {
 		cout << "Cannot open the camera" << endl;
 		return -1;
